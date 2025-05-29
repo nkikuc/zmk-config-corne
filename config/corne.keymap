@@ -68,13 +68,6 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
-
-        Moveupalayer: Moveupalayer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-            label = "MOVEUPALAYER";
-        };
     };
 
     combos {
