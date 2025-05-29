@@ -72,12 +72,7 @@
         Moveupalayer: Moveupalayer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LA(LBKT)>,
-                <&macro_tap>,
-                <&kp LA(RIGHT_BRACKET)>;
-
+            bindings = <>;
             label = "MOVEUPALAYER";
         };
     };
@@ -213,10 +208,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans      &kp N1  &kp N2    &kp N3        &kp N4           &kp N5           &kp N6         &kp N7          &kp N8          &kp N9           &kp N0  &trans
-&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &Moveupalayer    &kp PG_UP      &trans          &kp UP_ARROW    &trans           &trans  &trans
-&trans      &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-                              &kp LGUI      &trans           &kp SPACE        &kp RET        &trans          &trans
+&trans      &kp N1  &kp N2    &kp N3        &kp N4           &kp N5                                    &kp N6         &kp N7          &kp N8          &kp N9           &kp N0  &trans
+&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &hm LA(LEFT_BRACKET) LA(RIGHT_BRACKET)    &kp PG_UP      &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans      &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN                             &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+                              &kp LGUI      &trans           &kp SPACE                                 &kp RET        &trans          &trans
             >;
         };
 
