@@ -74,9 +74,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LG(RIGHT_BRACKET)>,
+                <&kp LA(LBKT)>,
                 <&macro_tap>,
-                <&kp LG(RS(BACKSLASH))>;
+                <&kp LA(RIGHT_BRACKET)>;
 
             label = "MOVEUPALAYER";
         };
