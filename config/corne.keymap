@@ -74,11 +74,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LA(LEFT_BRACKET)>,
+                <&kp LA(RBKT)>,
                 <&macro_tap>,
                 <&kp LC(V) &kp NUMBER_1>,
                 <&macro_tap>,
-                <&kp LA(AT_SIGN)>;
+                <&kp LA(LBKT)>;
 
             label = "LOWER_LAYER_OPACITY";
         };
@@ -88,11 +88,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LA(LBKT)>,
+                <&kp LA(RBKT)>,
                 <&macro_tap>,
                 <&kp LC(V)>,
                 <&macro_tap>,
-                <&kp LA(AT_SIGN)>;
+                <&kp LA(LBKT)>;
 
             label = "TURN_OFF_LAYER";
         };
