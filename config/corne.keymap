@@ -68,6 +68,24 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
+        Lower_Layer_Opacity: Lower_Layer_Opacity {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LA(LEFT_BRACKET) &kp LC(V) &kp NUMBER_1 &kp LA(AT_SIGN)>;
+
+            label = "LOWER_LAYER_OPACITY";
+        };
+
+        Turn_Off_Layer: Turn_Off_Layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LA(LBKT) &kp LC(V) &kp LA(AT)>;
+
+            label = "TURN_OFF_LAYER";
+        };
     };
 
     combos {
@@ -201,10 +219,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                   &kp N6         &kp N7          &kp N8          &kp N9           &kp N0  &trans
-&mo 4   &kp M   &kp P   &kp K     &kp N   &kp LA(RIGHT_BRACKET)    &kp PG_UP      &trans          &kp UP_ARROW    &trans           &trans  &trans
-&trans  &trans  &none   &none     &none   &kp PERIOD               &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-                        &kp LGUI  &trans  &kp SPACE                &kp RET        &trans          &trans
+&trans  &kp N1  &kp N2  &kp N3    &kp N4           &kp N5                   &kp N6         &kp N7          &kp N8          &kp N9           &kp N0  &trans
+&mo 4   &kp M   &kp P   &kp K     &kp N            &kp LA(RIGHT_BRACKET)    &kp PG_UP      &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans  &trans  &none   &none     &Turn_Off_Layer  &kp PERIOD               &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+                        &kp LGUI  &trans           &kp SPACE                &kp RET        &trans          &trans
             >;
         };
 
@@ -238,10 +256,10 @@
         EXTRA {
             display-name = "extra";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &kp LA(LEFT_BRACKET)    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &kp COMMA               &trans  &trans  &trans  &trans  &bootloader  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                &trans                  &trans  &trans  &trans  &trans  &trans       &trans
+&trans  &trans  &trans  &trans  &trans                &kp LA(LEFT_BRACKET)    &trans  &trans  &trans  &trans  &trans       &trans
+&trans  &trans  &trans  &trans  &Lower_Layer_Opacity  &kp COMMA               &trans  &trans  &trans  &trans  &bootloader  &trans
+                        &trans  &trans                &trans                  &trans  &trans  &trans
             >;
         };
     };
